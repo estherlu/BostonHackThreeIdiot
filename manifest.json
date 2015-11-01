@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "ImageHover",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "3Idiotslogo.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "http://*/", 
+    "https://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.tumblr.com/*", "https://www.tumblr.com/*"],
+      "css": ["main.css"]
+    }
+  ]
+}
